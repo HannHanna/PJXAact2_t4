@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <h1 th:text="${appName}">Título por defecto</h1>
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Categoría</th>
+        </tr>
+        <tr th:each="p : ${productos}">
+            <td th:text="${p.nombre}"></td>
+            <td th:text="${p.precio}"></td>
+            <td th:text="${p.categoria}"></td>
+        </tr>
+    </table>
+</body>
+</html>
